@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .section li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Monthly Report</h1>
+        <div class="section">
+            <h2>Books Issued: {{ books_issued }}</h2>
+            <ul>
+                {% for book in books_issued_list %}
+                <li>{{ book[1] }}</li>  <!-- Update to display book name -->
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Books Returned: {{ books_returned }}</h2>
+            <ul>
+                {% for book in books_returned_list %}
+                <li>{{ book[1] }}</li>  <!-- Update to display book name -->
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Currently Issued Books: {{ currently_issued_books|length }}</h2>
+            <ul>
+                {% for book in currently_issued_books %}
+                <li>{{ book[1] }}</li>  <!-- Update to display book name -->
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h2>Sections Explored:</h2>
+            <ul>
+                {% for section in sections_explored %}
+                <li>{{ section.name }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
