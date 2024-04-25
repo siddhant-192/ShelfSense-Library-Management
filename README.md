@@ -81,6 +81,8 @@ ShelfSense is a comprehensive web-based library management system that streamlin
 
 To get a local copy of the project up and running, follow the steps in the [Installation](#installation) section.
 
+## Troubleshooting
+If you are not able to get the entire code downloaded, just unzip the full_copy.zip. It has all the code. For any other queries email me at siddhantmantri328[at]gmail[dot]com
 
 ## Acknowledgments
 
